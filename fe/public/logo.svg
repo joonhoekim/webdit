@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+  <style>
+    .logo-text { font-family: Arial, sans-serif; font-weight: bold; font-size: 48px; }
+  </style>
+  
+  <path d="M10,20 h50 v10 h-20 v30 h-10 v-30 h-20 z" fill="black" />
+  <path d="M15,20 h230 v10 h-230 z" fill="black" />
+  
+  <text x="44" y="60" class="logo-text" fill="black">otalNote</text>
+</svg>

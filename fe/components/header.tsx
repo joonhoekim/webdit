@@ -33,7 +33,7 @@ const Header: React.FC = () => {
     },
   ];
 
-  const start = <img alt="logo" src="https://primefaces.org/cdn/primereact/images/logo.png" height="10" className="mr-2 h-10"></img>;
+  const start = <img alt="logo" src="/logo.svg" height="10" className="mr-2 h-10"></img>;
   const end = (
     <div className="flex align-items-center gap-2">
       <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
   );
 
   return (
-    <div className="card">
+    <div className="card header-height">
       <Menubar model={items} start={start} end={end} />
     </div>
   );
