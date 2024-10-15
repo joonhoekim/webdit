@@ -22,6 +22,8 @@ import {
     UNDO_COMMAND,
 } from 'lexical';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { INSERT_EXCALIDRAW_COMMAND } from './ExcalidrawPlugin/index';
+
 
 const LowPriority = 1;
 
@@ -170,6 +172,14 @@ export default function ToolbarPlugin() {
                 aria-label="Justify Align">
                 <i className="format justify-align" />
             </button>{' '}
+            <button
+                onClick={() => {
+                    editor.dispatchCommand(INSERT_EXCALIDRAW_COMMAND,
+                        undefined,);
+                }}
+                className="toolbar-item">
+                <span className="text">DRAW</span>
+            </button>
         </div>
     );
 }

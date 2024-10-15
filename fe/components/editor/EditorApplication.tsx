@@ -7,13 +7,15 @@
  */
 
 'use client'
-
 import { AutoFocusPlugin } from '@lexical/react/LexicalAutoFocusPlugin';
 import { LexicalComposer } from '@lexical/react/LexicalComposer';
 import { ContentEditable } from '@lexical/react/LexicalContentEditable';
 import { LexicalErrorBoundary } from '@lexical/react/LexicalErrorBoundary';
 import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
 import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin';
+import type { Klass, LexicalNode } from 'lexical';
+import { ExcalidrawNode } from './nodes/ExcalidrawNode';
+import ExcalidrawPlugin from './plugins/ExcalidrawPlugin';
 
 import ExampleTheme from './ExampleTheme';
 import ToolbarPlugin from './plugins/ToolbarPlugin';
@@ -21,11 +23,15 @@ import TreeViewPlugin from './plugins/TreeViewPlugin';
 
 import './EditorStyles.css';
 
+const PlaygroundNodes: Array<Klass<LexicalNode>> = [
+  ExcalidrawNode,
+];
+
 const placeholder = 'Enter some rich text...';
 
 const editorConfig = {
   namespace: 'React.js Demo',
-  nodes: [],
+  nodes: [...PlaygroundNodes],
   // Handling of errors during update
   onError(error: Error) {
     throw error;
@@ -56,6 +62,7 @@ export default function App() {
           <AutoFocusPlugin />
         </div>
         <TreeViewPlugin />
+        <ExcalidrawPlugin />
       </div>
     </LexicalComposer>
   );

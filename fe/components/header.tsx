@@ -6,30 +6,30 @@ import React from 'react';
 const Header: React.FC = () => {
   const items = [
     {
-      label: 'Home',
-      icon: 'pi pi-fw pi-home',
+      label: 'About',
+      // icon: 'pi pi-fw pi-home',
     },
     {
       label: 'Products',
-      icon: 'pi pi-fw pi-shopping-cart',
+      // icon: 'pi pi-fw pi-shopping-cart',
       items: [
         {
           label: 'Category 1',
-          icon: 'pi pi-fw pi-bookmark',
+          // icon: 'pi pi-fw pi-bookmark',
         },
         {
           label: 'Category 2',
-          icon: 'pi pi-fw pi-bookmark',
+          // icon: 'pi pi-fw pi-bookmark',
         },
       ]
     },
     {
       label: 'About',
-      icon: 'pi pi-fw pi-info-circle',
+      // icon: 'pi pi-fw pi-info-circle',
     },
     {
       label: 'Contact',
-      icon: 'pi pi-fw pi-envelope',
+      // icon: 'pi pi-fw pi-envelope',
     },
   ];
 
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
   const end = (
     <div className="flex align-items-center gap-2">
       <InputText placeholder="Search" type="text" className="w-8rem sm:w-auto" />
-      <Button label="Login" icon="pi pi-user" className="p-button-outlined" />
+      <Button label="Login" className="p-button-outlined" />
     </div>
   );
 
